@@ -1,13 +1,19 @@
+/*
+Maths Exercise Generation by @wangdino
+Version: 0.8.0
+*/
+
 #include <iostream>
 #include <fstream>
 #include <chrono>
 #include <random>
+#include <iomanip>
 
 using namespace std;
 
 int num(int nmin, int nmax);	// Generate a random integer
 char oper(int opertype);	// Input: 0=random; 1=addition; 2=deduction
-bool neg(int num1, int num2);	// Check whether solution from a deduction is negative or not: 1=neg; 0=pos or 0
+bool neg(int num1, int num2);	// Check whether solution from a deduction is negative or not: 1=neg; 0=pos(incl.0)
 
 int main() 
 {
@@ -26,9 +32,8 @@ int main()
 				int swap = num1;
 				num1 = num2;
 				num2 = swap;
-				//cout << "Swap done." << endl;
 			}
-			exp << num1 << " " << op << " " << num2 << " =\n";
+			exp << setw(2) << num1 << setw(2) << op << setw(3) << num2 << " =\n";
 			
 		}
 		exp.close();
