@@ -26,7 +26,7 @@ int main()
 				int swap = num1;
 				num1 = num2;
 				num2 = swap;
-				cout << "Swap done." << endl;
+				//cout << "Swap done." << endl;
 			}
 			exp << num1 << " " << op << " " << num2 << " =\n";
 			
