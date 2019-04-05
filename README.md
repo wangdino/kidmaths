@@ -1,4 +1,4 @@
-# maths
+# kidmaths
 
 References: random number generation
 http://www.cplusplus.com/reference/random/uniform_int_distribution/operator%28%29/
